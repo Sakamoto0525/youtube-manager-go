@@ -1,7 +1,8 @@
 package routes
 
 import (
-	"../web/api"
+	"project/web/api"
+
 	"github.com/labstack/echo"
 )
 

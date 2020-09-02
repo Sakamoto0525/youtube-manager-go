@@ -45,3 +45,20 @@ cd api/src/project
 cd front
 npm run dev
 ```
+
+## メモ
+
+### Goのimportについて
+
+Goのimportは、GOPATHからの相対パスで指定する
+相対パスは.envrcで設定している
+
+今回でいうと`../youtube-manager-go/api`と設定しているので、
+`youtube-manager-go/api/src/project/sample.go`をimportしたい場合は、
+`import "project/sample"`とする。
+
+相対パスを変更する場合は、.envrcのパスを書き換え、以下のコマンドを叩く
+
+```bash:
+$ direnv allow
+```

@@ -1,6 +1,8 @@
 package main
 
 import (
+	"project/routes"
+
 	"github.com/labstack/echo"
 )
 
