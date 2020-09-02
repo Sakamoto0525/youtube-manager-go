@@ -22,6 +22,14 @@
   version = "v1.10.11"
 
 [[projects]]
+  digest = "1:09cb61dc19af93deae01587e2fdb1c081e0bf48f1a5ad5fa24f48750dc57dce8"
+  name = "github.com/konsorten/go-windows-terminal-sequences"
+  packages = ["."]
+  pruneopts = "UT"
+  revision = "edb144dfd453055e1e49a3d8b410a660b5a87613"
+  version = "v1.0.3"
+
+[[projects]]
   digest = "1:efd601ad1d1189884f37ed075fadb5bbd17f1f5acf5862827247c6da56d125ba"
   name = "github.com/labstack/echo"
   packages = [
@@ -60,6 +68,14 @@
   pruneopts = "UT"
   revision = "7b513a986450394f7bbf1476909911b3aa3a55ce"
   version = "v0.0.12"
+
+[[projects]]
+  digest = "1:05eebdd5727fea23083fce0d98d307d70c86baed644178e81608aaa9f09ea469"
+  name = "github.com/sirupsen/logrus"
+  packages = ["."]
+  pruneopts = "UT"
+  revision = "60c74ad9be0d874af0ab0daef6ab07c5c5911f0d"
+  version = "v1.6.0"
 
 [[projects]]
   digest = "1:c468422f334a6b46a19448ad59aaffdfc0a36b08fdcc1c749a0b29b6453d7e59"
@@ -150,6 +166,7 @@
   input-imports = [
     "github.com/labstack/echo",
     "github.com/labstack/echo/middleware",
+    "github.com/sirupsen/logrus",
     "github.com/valyala/fasthttp",
   ]
   solver-name = "gps-cdcl"
