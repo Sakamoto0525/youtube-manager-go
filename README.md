@@ -62,3 +62,7 @@ Goのimportは、GOPATHからの相対パスで指定する
 ```bash:
 $ direnv allow
 ```
+
+# APIキー
+
+AIzaSyCJNFuzmAGeAe5ZCXSqgo-el8ysXmnxxMQ
