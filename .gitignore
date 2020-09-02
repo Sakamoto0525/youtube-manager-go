@@ -16,3 +16,4 @@
 
 api/.envrc
 api/src/project/vendor
+api/bin
