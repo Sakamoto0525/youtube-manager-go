@@ -33,6 +33,10 @@ npm install
 ```bash:
 cd api/src/project
 go run server.go
+
+# ホットリロード
+cd api/src/project
+../../bin/realize start --run --no-config
 ```
 
 ### Front
