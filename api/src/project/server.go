@@ -3,12 +3,18 @@ package main
 import (
 	"project/routes"
 
+	"github.com/joho/godotenv"
 	"github.com/labstack/echo"
 	"github.com/labstack/echo/middleware"
 	"github.com/sirupsen/logrus"
 )
 
 func init() {
+	err := godotenv.Load()
+	if err != nil {
+		logrus.Fatal(".envの読み込みに失敗しました。")
+	}
+
 	logrus.SetLevel(logrus.DebugLevel)
 	logrus.SetFormatter(&logrus.JSONFormatter{})
 }

@@ -3,6 +3,8 @@ package api
 import (
 	"context"
 
+	"os"
+
 	"github.com/labstack/echo"
 	"github.com/sirupsen/logrus"
 	"github.com/valyala/fasthttp"
@@ -12,7 +14,7 @@ import (
 
 func FetchMostPoplarVideos() echo.HandlerFunc {
 	return func(c echo.Context) error {
-		key := "AIzaSyCJNFuzmAGeAe5ZCXSqgo-el8ysXmnxxMQ"
+		key := os.Getenv("YOUTUBE_API_KEY")
 
 		ctx := context.Background()
 
