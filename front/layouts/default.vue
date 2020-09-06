@@ -4,8 +4,8 @@
 
     <div class="columns">
       <TheSidebar />
+      <nuxt />
     </div>
-    <nuxt />
   </div>
 </template>
 
