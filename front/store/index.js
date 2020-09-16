@@ -5,6 +5,8 @@ export const state = () => ({
   relatedItems: [],
   item: [],
   meta: {},
+  searchItems: [],
+  searchMeta: {}
 })
 
 export const actions = {
@@ -34,6 +36,14 @@ export const actions = {
     const client = createRequestClient(this.$axios)
     const res = await client.get(payload.uri)
     commit('mutateRelatedVideos', res)
+  },
+  /**
+   * Video検索
+   */
+  async searchVideos({ commit }, payload) {
+    const client = createRequestClient(this.$axios)
+    const res = await client.get(payload.uri, payload.params)
+    commit('mutateSearchVideos', res)
   }
 }
 
@@ -48,8 +58,13 @@ export const mutations = {
   },
   mutateRelatedVideos(state, payload) {
     state.relatedItems = payload.items || []
+  },
+  mutateSearchVideos(state, payload) {
+    state.searchItems = payload.items ? state.searchItems.concat(payload.items) : []
+    state.searchMeta = payload
   }
 }
+
 
 export const getters = {
   getPopularVideos(state) {
@@ -63,5 +78,11 @@ export const getters = {
   },
   getRelatedVideos(state) {
     return state.relatedItems
+  },
+  getSearchVideos(state) {
+    return state.searchItems
+  },
+  getSearchMeta(state) {
+    return state.searchMeta
   }
 }
